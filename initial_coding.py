@@ -22,15 +22,18 @@ def get_completion_2(prompt, model="gpt-3.5-turbo"):
 
 
 path = PATH
+
+#df with the chunks of your data
 df = pd.read_csv(path+'chunk_data.csv', encoding ='latin-1')
 
 
-#iterate over evry chunk of data
+#iterate over every chunk of data
 l = len(df.index)
 
 for i in range(l):
     text = df.loc[i]['Interview_chunk']
-    print (i)
+    
+    print (i) #delete if needed, I just use it for checks
     
 #you can create more codes for each chunk just modify the number
     prompt = f"""
@@ -59,4 +62,4 @@ for i in range(l):
      
     myFile = path+'1_challenges_list.csv'
     
-    df2.to_csv(myFile, header=None, mode='a')
+    df2.to_csv(myFile, header=None, mode='a') #append the codes
