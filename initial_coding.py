@@ -35,7 +35,7 @@ for i in range(l):
     
     print (i) #delete if needed, I just use it for checks
     
-#you can create more codes for each chunk just modify the number
+#you can create more codes for each chunk just modify the number, this below is one of the prompts used for the User Personas
     prompt = f"""
    
     A challenge is an obstacle that a person tries to overcome, in particular in relation to accessing data and knowledge.
